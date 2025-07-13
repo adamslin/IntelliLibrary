@@ -1,0 +1,25 @@
+@model IEnumerable<LibraryInventoryApp.Models.Book>
+
+<h2>Books</h2>
+<a href="/Book/Create" class="btn btn-primary">Add New Book</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Title</td>
+                <td>@book.Author</td>
+                <td>@book.ISBN</td>
+                <td>@book.Quantity</td>
+            </tr>
+        }
+    </tbody>
+</table>
